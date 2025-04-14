@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head><title>Contact Book</title></head>
+<body>
+    <h1>All Contacts</h1>
+    <a href="/add">Add New Contact</a>
+    <ul>
+        {% for contact in contacts %}
+            <li>
+                {{ contact[1] }} - {{ contact[2] }} - {{ contact[3] }}
+                <a href="/update/{{ contact[0] }}">Edit</a>
+                <a href="/delete/{{ contact[0] }}">Delete</a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
